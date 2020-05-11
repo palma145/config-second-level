@@ -1,0 +1,21 @@
+spring:
+   datasource:
+      url: jdbc:postgresql://localhost:5432/postgres
+      username: postgres
+      platform: postgres
+      driverClassName: org.postgresql.Driver
+   jpa:
+      properties:
+         hibernate:
+            cache:
+               use_second_level_cache: true
+               use_query_cache: true
+               region:
+                  factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+      show-sql: true
+
+#spring.datasource.password=pass
+#spring.application.name=second-level
+server:
+   port: 8080
